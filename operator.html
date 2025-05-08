@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mode Toggle</title>
+</head>
+<!--  <style>
+    .light {
+      background-color: white;
+      color: black;
+    }
+    .dark {
+      background-color: black;
+      color: white;
+    }
+    #mode{
+        color: dodgerblue;
+        background-color: cyan;
+        font-size: larger;
+        padding: 10px 10px;
+        border-radius: 10px;
+    }
+  </style> 
+</head>
+<body class="light">
+  <button id="mode">Change Mode</button>
+
+  <script>
+    let modeBtn = document.querySelector("#mode");
+    let body = document.querySelector("body");
+    let currMode = "light";
+
+    modeBtn.addEventListener("click", () => {
+      if (currMode === "light") {
+        currMode = "dark";
+        body.classList.add("dark");
+        body.classList.remove("light");
+      } else {
+        currMode = "light";
+        body.classList.add("light");
+        body.classList.remove("dark");
+      }
+      console.log(currMode);
+    });
+  </script> -->
+
+<body>
+
+<script src="./operator.js"></script>
+</body>
+
+</html>
