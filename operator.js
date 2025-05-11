@@ -196,18 +196,20 @@ if(isNaN(num)){
 }
    */
 ////////////////////day3 task 1 on operators to check it is odd or even//////////////////////////////////////////////
-
+/*
 // check whether the number from input is odd or even.
 let num=Number(prompt("Enter any number to check:"));
-
-if(num%2 == 0){
+if(isNaN(num)){
+    alert("this is string !! please enter valid number");
+}
+else if(num%2 == 0){
     alert(num + " is an even number");
 }else{
     alert(num + " is an odd number");
 }
-
+*/
 ///////////////////// day3 task 2 to find greatest and smallest number among 3 numbers//////////////////////////////////////////////////////////////////////////
-  
+  /*
 // take 3 numbers from input and find the greatest and smallest// Take 3 numbers as input from the user
 let num1 = Number(prompt("Enter first number:"));
 let num2 = Number(prompt("Enter second number:"));
@@ -216,7 +218,9 @@ let num3 = Number(prompt("Enter third number:"));
 let greatest, smallest;
 
 // Check for greatest number
-if (num1 > num2 ) {
+if (isNaN(num1) || isNaN(num2) || isNaN(num3))
+    alert("OOPS!! Please enter numbers");
+else if (num1 > num2 ) {
     if( num1 > num3){
         greatest = num1;
     }
@@ -249,7 +253,7 @@ if (num1 < num2){
 // Show result
 alert("Greatest is " + greatest);//here '+' is used to concate the string and number together.
 alert("Smallest is " + smallest);
-
+*/
 
 //////////////day3 task 3  to check the  grade for that participants marks///////////////////////////////////////////////////////////////////////////////////
 /* condition:
@@ -260,10 +264,13 @@ alert("Smallest is " + smallest);
 below 60--->Grade F
 any invalid number ---> "Invalid Marks"
 */
-
-let  marks = Number(prompt("Enter the marks of Participants:"));
-if(marks > 100 || marks < 0){
-     (marks + " is invalid marks");
+/*
+let  marks = prompt("Enter the marks of Participants:");
+if(isNaN(marks)){
+    alert("OOPS!! Please enter marks in number");
+}
+ else if(marks > 100 || marks < 0){
+    alert(marks + " is invalid marks");
 }else if(marks >=90 && marks <=100){
     alert("Grade: A");
 }else if(marks >=80){
@@ -275,4 +282,27 @@ if(marks > 100 || marks < 0){
 }else{
     alert("Grade:F");
 }
-    
+  */
+ ////////////////////Switch Statement ////////////////////////////////////////////////////////////////  
+ //printing the days of week on input of corresponding number
+ let days=Number(prompt("Enter  number:"));
+ 
+    switch(days)
+    {
+        case 1:alert("Sunday");
+        break;
+         case 2:alert("Monday");
+        break;
+         case 3:alert("Tuesday");
+        break;
+         case 4:alert("Wednesday");
+        break;
+         case 5:alert("Thursday");
+        break;
+         case 6:alert("Friday");
+        break;
+         case 7:alert("Saturday");
+        break;
+        default:alert("OOPS!! Invalid Input");
+    }
+ 
