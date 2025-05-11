@@ -285,6 +285,7 @@ if(isNaN(marks)){
   */
  ////////////////////Switch Statement ////////////////////////////////////////////////////////////////  
  //printing the days of week on input of corresponding number
+ /*
  let days=Number(prompt("Enter  number:"));
  
     switch(days)
@@ -305,4 +306,71 @@ if(isNaN(marks)){
         break;
         default:alert("OOPS!! Invalid Input");
     }
- 
+ */
+/* WAP to take grade and number from input and
+check whether it is good grade ,an average grade or
+bad grade
+example:
+input:B,72
+output:it is a bad B grade
+*/
+/*
+let grades= prompt("Enter Grades:");
+let marks =Number(prompt("Enter marks:"));
+
+switch (grades)
+{
+    case 'A':
+        if(marks >= 90 && marks <=100){
+        alert("It is a Good A grade");
+    }
+    break;
+    
+    case 'B':
+        if(marks >= 80 && marks < 90){
+        alert("It is a Good B grade");
+    } 
+    break;
+    
+    case 'C':
+        if(marks >= 40 && marks <=79){
+        alert("It is an average grade");
+    }
+    break;
+
+    default:alert("It is Bad grades");
+}
+*/
+//create a calculator using +,-,*,/,and mod operator using userinput
+let op=prompt("Enter any Arithmetic operator");
+let num1=Number(prompt("Enter first Number:"));
+let num2=Number(prompt("Enter Second Number:"));
+switch(op){
+    case '+':
+        let sum =num1+num2;
+        alert("the sum of two numbers is: " + sum);
+        break;
+
+         case '-':        
+        let diff =num1-num2;
+        alert("the diff of two numbers is: " + diff);
+        break;
+
+         case '*':        
+        let mul =num1*num2;
+        alert("the mul of two numbers is: " + mul);
+        break;
+
+         case '/':        
+        let div =num1/num2;
+        alert("the div of two numbers is: " + div);
+        break;
+
+         case '%':        
+        let mod =num1 % num2;
+        alert("the mod of two numbers is: " + mod);
+        break;
+
+        default:alert("Invalid Input");
+
+}
