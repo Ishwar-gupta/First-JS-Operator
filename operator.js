@@ -52,7 +52,7 @@ age =Number(age);
 ?console.log("Yes,You can Vote")
 :console.log("OOPS!!,You can't Vote");
 */
-///////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////day1 on conditional( ternary) operator//////////////////////////////////////////////////////////////////////////////
 /*
 Task1:Job Application Eligibility
 Scenario:
@@ -68,7 +68,7 @@ Logic & Output:
 - Otherwise -> "Not eligible."
  */
 /*
-let age=parseInt(prompt("Enter Your Age(in Number):"));
+let age=Number(prompt("Enter Your Age(in Number):"));
 let qual=prompt("Enter Your Qualificationa:");
 let exp=parseFloat(prompt("Enter Your Work Experience"));
 
@@ -81,7 +81,7 @@ let result=(age>21 && age<35) &&
 :"Not eligible.";
 alert(result);
 */
-
+/*
 let age=parseInt(prompt("Enter Your Age(in Number):"));
 let qual=prompt("Enter Your Qualificationa:");
 let exp=parseFloat(prompt("Enter Your Work Experience"));
@@ -93,7 +93,7 @@ alert((age>21 && age<35)?
      "You meet age only."
      :"Not eligible." )
 
-
+*/
 
 /*
 
@@ -118,7 +118,7 @@ if(Age>21 && Age<35){
 }
 
 */
-//////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////day1 tasks on ternary operator//////////////////////////////////////////////////////////////////////////////
 
 /*
  Task 2: Loan Approval Checker (Nested Ternary Operator)
@@ -140,16 +140,15 @@ Logic & Output:
 let Age=parseInt(prompt("Enter your age(in Number):"));
 let income=parseFloat(prompt("Enter your Monthly Income(in number):"));
 let creditScore=parseFloat(prompt("Enter your creditScore(in number):"));
-let result=(Age>25 && Age<60)&&
-(income>=30000)&&
-(creditScore>650)?"Congratulation!!,Loan Approved"
-:((Age>25 && Age<60)&&
-(income>=30000) || creditScore<650 )?"Good income and age, but poor credit score."
-:(Age>25 && Age<60)?"Sorry!! Meets age only."
-: " OOPS!! Not eligible for loan.";
-alert(result);
-*/
+alert( Age>25 && Age<60?
+         income>=30000?
+            creditScore>650?
+             "Congratulation!!,Loan Approved"
+         :"Good income and age, but poor credit score."
+      :"Sorry!! Meets age only."
+: " OOPS!! Not eligible for loan.");
 
+*/
 //checking question1 using if-else statement
 /*
 
@@ -173,3 +172,107 @@ if(age>=25 && age<=60){
     console.log("OOPS!! Not eligible for loan.");
 }
 */
+/////////////////classwork on  operator/////////////////////////////////////////////
+//write a program in js to check whether the input from prompt is whole number or not
+//and check both positive ,negative or zero and odd even
+/*
+const num=prompt("Enter the number to be checked:");
+
+if(isNaN(num)){
+    console.log("Your input is not a number");
+}else{
+    if(num>0){
+        // console.log(num," is Positive Number ");
+        if(num%2==0){
+            console.log(num,"is Even Number");
+        }else{
+            console.log(num,"is Odd Number");
+        }
+    }else if(num<0){
+        console.log(num," is Negative Number and neither even nor odd ");
+    }else{
+        console.log(num,"is neither Postive nor Negative");
+    }
+}
+   */
+////////////////////day3 task 1 on operators to check it is odd or even//////////////////////////////////////////////
+
+// check whether the number from input is odd or even.
+let num=Number(prompt("Enter any number to check:"));
+
+if(num%2 == 0){
+    alert(num + " is an even number");
+}else{
+    alert(num + " is an odd number");
+}
+
+///////////////////// day3 task 2 to find greatest and smallest number among 3 numbers//////////////////////////////////////////////////////////////////////////
+  
+// take 3 numbers from input and find the greatest and smallest// Take 3 numbers as input from the user
+let num1 = Number(prompt("Enter first number:"));
+let num2 = Number(prompt("Enter second number:"));
+let num3 = Number(prompt("Enter third number:"));
+
+let greatest, smallest;
+
+// Check for greatest number
+if (num1 > num2 ) {
+    if( num1 > num3){
+        greatest = num1;
+    }
+    else{
+        greatest = num3;
+    }
+} else  {
+    if(  num2 > num3){
+        greatest = num2;
+    } else {
+    greatest = num3;
+}
+}
+
+// Check for smallest number
+if (num1 < num2){
+    if(num1 < num3){
+        smallest = num1;
+    }else{
+        smallest = num3;
+    }
+}else{
+    if(num2 < num3){
+        smallest = num2;
+    }else{
+        smallest = num3;
+    }
+}
+
+// Show result
+alert("Greatest is " + greatest);//here '+' is used to concate the string and number together.
+alert("Smallest is " + smallest);
+
+
+//////////////day3 task 3  to check the  grade for that participants marks///////////////////////////////////////////////////////////////////////////////////
+/* condition:
+90-100--->Grade A
+80-89--->Grade B
+70-79--->Grade C
+60-69--->Grade D
+below 60--->Grade F
+any invalid number ---> "Invalid Marks"
+*/
+
+let  marks = Number(prompt("Enter the marks of Participants:"));
+if(marks > 100 || marks < 0){
+     (marks + " is invalid marks");
+}else if(marks >=90 && marks <=100){
+    alert("Grade: A");
+}else if(marks >=80){
+    alert("Grade:B");
+}else if(marks >= 70){
+    alert("Grade:C");
+}else if(marks >=60){
+    alert("Grade:D");
+}else{
+    alert("Grade:F");
+}
+    
