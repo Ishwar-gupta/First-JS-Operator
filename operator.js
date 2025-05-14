@@ -341,6 +341,8 @@ switch (grades)
     default:alert("It is Bad grades");
 }
 */
+
+/*
 //create a calculator using +,-,*,/,and mod operator using userinput
 let op=prompt("Enter any Arithmetic operator");
 let num1=Number(prompt("Enter first Number:"));
@@ -374,3 +376,20 @@ switch(op){
         default:alert("Invalid Input");
 
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
